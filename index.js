@@ -1,6 +1,9 @@
+// Declare variables
 let container = document.querySelector('#response-div');
+let searchBarForm = document.querySelector('#search-form');
 
-function getPhotos(images) {
+//Display photos function
+function displayPhotos(images) {
     images.forEach(image => {
         let imgDiv = document.createElement('div');
         imgDiv.innerHTML = `
@@ -12,14 +15,12 @@ function getPhotos(images) {
     })
  }
 
- let searchBarForm = document.querySelector('#search-form');
-
+//Dynamic photo rendering with event listener
  searchBarForm.addEventListener('submit', function(e) {
     e.preventDefault();
-
     container.innerHTML = "";
-    let inputValue = document.querySelector('#search-bar').value;
-    fetch(`https://api.pexels.com/v1/search?query=${inputValue}&per_page=25`,{
+    let inputValue = document.querySelector('#search-input').value;
+    fetch(`https://api.pexels.com/v1/search?query=${inputValue}&per_page=20`,{
         headers: {
           Authorization: "LB6rfF6oyTb61KvNfA1WZMeWc3MB8eL9eVNeGadUuHlA0Z7sYclbEhi1"
         }
@@ -28,12 +29,12 @@ function getPhotos(images) {
            return resp.json();
          })
          .then(data => {
-           getPhotos(data.photos);
+           displayPhotos(data.photos);
          })
+ });
 
- })
-
- fetch("https://api.pexels.com/v1/search?query=chimpanzees&per_page=25",{
+//Defaults chimpanzee photos
+ fetch("https://api.pexels.com/v1/search?query=chimpanzees&per_page=20",{
    headers: {
      Authorization: "LB6rfF6oyTb61KvNfA1WZMeWc3MB8eL9eVNeGadUuHlA0Z7sYclbEhi1"
    }
@@ -42,5 +43,5 @@ function getPhotos(images) {
       return resp.json();
     })
     .then(data => {
-      getPhotos(data.photos);
+      displayPhotos(data.photos);
     })
