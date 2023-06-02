@@ -1,0 +1,27 @@
+* {
+    margin: 5px 0;
+}
+
+body {
+    text-align: center;
+}
+
+#search-bar {
+    width: 40%;
+    height: 30px;
+    margin: 30px 0;
+}
+
+#response-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo {
+    width: 33%;
+}
+
+img {
+    width: 90%;
+}
