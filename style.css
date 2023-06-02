@@ -14,25 +14,28 @@ body {
 
 .search-header {
   position: relative;
+  height: 450px;
 }
 
 .search-header img {
   width: 100%;
+  height: 450px;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
   max-width: 33%;
+  padding-bottom: 35px;
 }
 
 .form-container h1 {
-  font-size: 33px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 40px;
   color: #736251;
@@ -40,7 +43,7 @@ body {
 
 #search-input {
   background-color: #ffffff;
-  width: 40%;
+  width: 50%;
   height: 40px;
   border: none;
   border-radius: 5px;
@@ -48,6 +51,11 @@ body {
   padding-left: 15px;
   font-size: 14px;
   font-weight: 400;
+}
+
+#search-input:focus {
+  border: none;
+  outline: none;
 }
 
 #attribution-div {
@@ -75,4 +83,51 @@ body {
 
 .img-div img {
   width: 99%;
+}
+
+/* Medium/Large devices (Laptops, 768px and down) */
+@media only screen and (max-width: 1250px) {
+  .form-container h1 {
+    font-size: 28px;
+  }
+}
+
+/* Medium devices (landscape tablets, 900px and down) */
+@media only screen and (max-width: 900px) {
+  .search-header {
+    margin-top: 35px;
+  }
+
+  .search-header img {
+    height: 360px;
+  }
+
+  .form-container h1 {
+    font-size: 24px;
+  }
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 750px) {
+  .search-header {
+    height: 320px;
+  }
+
+  .search-header img {
+    height: 320px;
+  }
+
+  .form-container {
+    padding-top: 100px;
+    max-width: 60%;
+  }
+
+  .form-container h1 {
+    font-size: 20px;
+  }
+
+  .img-div {
+    display: flex;
+    width: 100%;
+  }
 }
