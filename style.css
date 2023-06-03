@@ -9,7 +9,6 @@
 body {
   font-family: PlusJakartaSans, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
-  text-align: center;
 }
 
 .search-header {
@@ -85,7 +84,7 @@ body {
   width: 99%;
 }
 
-/* Medium/Large devices (Laptops, 768px and down) */
+/* Medium/Large devices (Laptops, 1250px and down) */
 @media only screen and (max-width: 1250px) {
   .form-container h1 {
     font-size: 28px;
@@ -107,14 +106,18 @@ body {
   }
 }
 
-/* Small devices (phones, 600px and down) */
+/* Small devices (phones, 750px and down) */
 @media only screen and (max-width: 750px) {
   .search-header {
     height: 320px;
+    width: 100vw;
+    margin: auto;
   }
 
   .search-header img {
     height: 320px;
+    width: 100vw;
+    margin: auto;
   }
 
   .form-container {
@@ -125,9 +128,27 @@ body {
   .form-container h1 {
     font-size: 20px;
   }
+}
+
+/* Small devices (small phones, 650px and down) */
+@media only screen and (max-width: 650px) {
+  #response-div {
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+
+  .search-header img {
+    width: 650px;
+  }
+
+  .img-div img {
+    width: 99%;
+  }
 
   .img-div {
-    display: flex;
-    width: 100%;
+    margin: auto;
+    width: 400px;
   }
 }
