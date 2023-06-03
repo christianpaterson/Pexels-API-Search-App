@@ -6,10 +6,9 @@ let searchBarForm = document.querySelector("#search-form");
 function displayPhotos(images) {
   images.forEach((image) => {
     let imgDiv = document.createElement("div");
+    imgDiv.classList.add('img-div');
     imgDiv.innerHTML = `
-            <div class="img-div">
-               <img src=${image.src.small}>
-            </div>
+               <img src=${image.src.medium}>
         `;
     container.appendChild(imgDiv);
   });
