@@ -1,6 +1,6 @@
 // Declare variables
-let container = document.querySelector("#response-div");
-let searchBarForm = document.querySelector("#search-form");
+const container = document.querySelector("#response-div");
+const searchBarForm = document.querySelector("#search-form");
 
 //Display photos function
 function displayPhotos(images) {

@@ -11,17 +11,17 @@ body {
     Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
 }
 
-.search-header {
+#search-header {
   position: relative;
   height: 450px;
 }
 
-.search-header img {
+#search-header img {
   width: 100%;
   height: 450px;
 }
 
-.form-container {
+#form-container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -33,7 +33,7 @@ body {
   padding-bottom: 35px;
 }
 
-.form-container h1 {
+#form-container h1 {
   font-size: 32px;
   font-weight: 600;
   line-height: 40px;
@@ -86,46 +86,46 @@ body {
 
 /* Medium/Large devices (Laptops, 1250px and down) */
 @media only screen and (max-width: 1250px) {
-  .form-container h1 {
+  #form-container h1 {
     font-size: 28px;
   }
 }
 
 /* Medium devices (landscape tablets, 900px and down) */
 @media only screen and (max-width: 900px) {
-  .search-header {
+  #search-header {
     margin-top: 35px;
   }
 
-  .search-header img {
+  #search-header img {
     height: 360px;
   }
 
-  .form-container h1 {
+  #form-container h1 {
     font-size: 24px;
   }
 }
 
 /* Small devices (phones, 750px and down) */
 @media only screen and (max-width: 750px) {
-  .search-header {
+  #search-header {
     height: 320px;
     width: 100vw;
     margin: auto;
   }
 
-  .search-header img {
+  #search-header img {
     height: 320px;
     width: 100vw;
     margin: auto;
   }
 
-  .form-container {
+  #form-container {
     padding-top: 100px;
     max-width: 60%;
   }
 
-  .form-container h1 {
+  #form-container h1 {
     font-size: 20px;
   }
 }
@@ -139,7 +139,7 @@ body {
     margin: 0 auto 50px;
   }
 
-  .search-header img {
+  #search-header img {
     width: 650px;
   }
 
