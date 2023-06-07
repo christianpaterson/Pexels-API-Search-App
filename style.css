@@ -75,14 +75,14 @@ body {
 
 #response-div {
   width: 80%;
-  display: flex;
-  flex-wrap: wrap;
+  columns: 3;
+  gap: 3px;
   justify-content: center;
   margin: 0 auto 50px;
 }
 
 .img-div img {
-  width: 99%;
+  width: 100%;
 }
 
 /* Medium/Large devices (Laptops, 1250px and down) */
