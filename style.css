@@ -80,6 +80,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   color: black;
 }
 
+button {
+  margin-left: 10px;
+  background-color: #bae8e8;
+  border: none;
+  height: 25px;
+  width: 125px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #88dada;
+}
+
 #response-div {
   width: 80%;
   columns: 3;
@@ -145,6 +159,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     display: block;
     text-align: center;
     margin: 0 auto 50px;
+    columns: 1;
   }
 
   #search-header img {
