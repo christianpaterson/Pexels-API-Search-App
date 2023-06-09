@@ -1,14 +1,18 @@
 // Declare variables
 const container = document.querySelector("#response-div");
 const searchBarForm = document.querySelector("#search-form");
+const button = document.querySelector('button');
+const elements = ["grass", "rainy", "fire", "sky"];
+let counter = 0;
 
 //Display photos function
 function displayPhotos(images) {
+  container.innerHTML = "";
   images.forEach((image) => {
     let imgDiv = document.createElement("div");
     imgDiv.classList.add('img-div');
     imgDiv.innerHTML = `
-               <img src=${image.src.large}>
+               <img src=${image.src.original}>
         `;
     container.appendChild(imgDiv);
   });
@@ -32,10 +36,19 @@ function fetchPhotos(query) {
 //Dynamic photo rendering with event listener
 searchBarForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  container.innerHTML = "";
   let inputValue = document.querySelector("#search-input").value;
   fetchPhotos(inputValue);
 });
 
-//Default fire photos
-fetchPhotos('fire');
+//Cycle through the elements
+button.addEventListener('click', function() {
+  fetchPhotos(elements[counter]);
+  if(counter < elements.length) {
+    counter++;
+  } else {
+    counter = 0;
+  }
+})
+
+//Default space photos
+fetchPhotos('space');
