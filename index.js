@@ -1,6 +1,6 @@
 // Declare variables
 const container = document.querySelector("#response-div");
-const searchBarForm = document.querySelector("#search-form");
+const searchForm = document.querySelector("#search-form");
 const button = document.querySelector('button');
 const elements = ["grass", "rainy", "fire", "sky"];
 let counter = 0;
@@ -34,7 +34,7 @@ function fetchPhotos(query) {
 }
 
 //Dynamic photo rendering with event listener
-searchBarForm.addEventListener("submit", function (e) {
+searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let inputValue = document.querySelector("#search-input").value;
   fetchPhotos(inputValue);
